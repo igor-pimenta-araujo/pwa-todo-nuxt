@@ -14,7 +14,7 @@
                     <input v-model="task" class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" v-on:keyup.enter="addTask(task)" placeholder="Add Todo">
                 </div>
             </div>
-            <Task v-bind:tasks="listTasks"></Task>
+            <Task v-bind:tasks="listTasks" v-on:deleteTask="deleteTask"></Task>
         </div>
         <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
           To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
@@ -37,9 +37,12 @@ export default {
   },
   methods: {
     addTask(task){
-      this.listTasks.unshift(task);
+      this.listTasks.push(task);
       this.task = "";
-    }
-  },
+    },
+    deleteTask: function (task) {
+			this.listTasks.splice(this.listTasks.indexOf(task), 1);
+    },
+  }
 }
 </script>
