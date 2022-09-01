@@ -44,12 +44,12 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'helloworld',
-      short_name: 'helloworld',
+      name: 'todolist',
+      short_name: 'todolist',
       lang: 'en'
     },
     meta: {
-      name: 'helloworld',
+      name: 'todolist',
       author: 'Igor'
     },
   },
