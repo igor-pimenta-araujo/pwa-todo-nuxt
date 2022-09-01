@@ -32,7 +32,7 @@ export default {
         return {
           task: "",
           message: "",
-          listTasks: ["igor", "felipe"]
+          listTasks: ["igor"]
         };
   },
   methods: {
