@@ -17,7 +17,7 @@
             <Task v-bind:tasks="listTasks" v-on:deleteTask="deleteTask" v-on:isDone="isDone"></Task>
         </div>
         <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-          To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
+          Made by <a target="_blank" class="text-blue-600" href="https://portfolio-igor-araujo.vercel.app/">Igor Araujo</a>
         </p>
       </div>
       <Social></Social>
@@ -55,7 +55,6 @@ export default {
     },
   },
   created() {
-    console.log(this.ToDoItems);
   },
 }
 </script>

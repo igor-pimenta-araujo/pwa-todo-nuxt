@@ -35,11 +35,33 @@ export default {
     '@nuxtjs/pwa',
   ],
 
+  database: {
+    emulatorPort: 9000,
+    emulatorHost: 'localhost',
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/pwa',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: "AIzaSyAi3h9PlBuDp2-6u0fItmNdU-dW907Us2g",
+          authDomain: "todo-10069.firebaseapp.com",
+          projectId: "todo-10069",
+          storageBucket: "todo-10069.appspot.com",
+          messagingSenderId: "897309634850",
+          appId: "1:897309634850:web:a213cca2087a71ef5a757b",
+          measurementId: "G-N7DR0V38EM"
+        },
+        services: {
+          database: true // Just as example. Can be any other service.
+        }
+      }
+    ]
   ],
 
   pwa: {
